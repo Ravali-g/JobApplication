@@ -1,0 +1,4 @@
+rootProject.name = 'job-application'
+include ':job-application-contract'
+include ':job-application-service'
+

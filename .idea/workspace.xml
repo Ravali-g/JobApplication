@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e5f47d0a-92e1-4048-9e03-996f3541cf3c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/JobApplicationContractMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/constants/JobApplicationJsonConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/constants/JobSeekerControllerJsonConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/model/JobApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/model/JobApplicationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/model/JobApplicationRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/model/JobApplicationResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/model/JobSeeker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/model/JobSeekerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/model/JobSeekerRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/JobApplicationMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/config/JobApplicationConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/config/JobSeekerConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/controller/JobApplicationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/controller/JobSeekerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/processor/JobApplicationRequestProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/processor/JobSeekerRequestProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/service/JobApplicationRequestProcessorImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/service/JobApplicationRequestService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/service/JobSeekerRequestProcessorImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/service/JobSeekerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/resources/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/job-application-service">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="job-application" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="job-application" type="f1a62948:ProjectNode" />
+                <item name="job-application-service" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="job-application" type="f1a62948:ProjectNode" />
+                <item name="job-application-service" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="job-application" type="f1a62948:ProjectNode" />
+                <item name="job-application-service" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="28x72nDkKImxnYEdRTofEwC0WWl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/rgopaluni/IdeaProjects/job-application/job-application-service/src/main/java/com/mycompany/careers/service&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/service" />
+      <recent name="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/model" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="com.mycompany.careers.processor" />
+      <recent name="com.mycompany.careers.controller" />
+      <recent name="com.mycompany.careers.config" />
+      <recent name="com.mycompany.careers.constants" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.job-application [bootRun]">
+    <configuration name="job-application [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--stacktrace" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootRun" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="job-application [clean build]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.job-application [clean build]" />
+      <item itemvalue="Gradle.job-application [bootRun]" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e5f47d0a-92e1-4048-9e03-996f3541cf3c" name="Changes" comment="" />
+      <created>1652146192577</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652146192577</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.web.client.HttpServerErrorException$InternalServerError" package="org.springframework.web.client" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="GradleRunConfiguration">
+        <watch expression="((InvalidDataAccessResourceUsageException)e).cause" custom="org.springframework.dao.InvalidDataAccessResourceUsageException" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
