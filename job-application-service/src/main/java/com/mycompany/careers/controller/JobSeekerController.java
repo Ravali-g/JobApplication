@@ -40,7 +40,11 @@ public class JobSeekerController {
         return jobSeekerRequestProcessorImpl.submitApplication(jobSeekerRequest);
     }
 
-
+    @PutMapping (path="{"+UPDATE+"}",consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> updateJobApplication(@ModelAttribute JobSeekerRequestDto jobSeekerRequest){
+        logger.debug("inside method:updateJobApplication");
+        return jobSeekerRequestProcessorImpl.updateJobApplication(jobSeekerRequest);
+    }
 
 
 }

@@ -15,10 +15,7 @@ import org.springframework.web.client.RestTemplate;
 import java.net.http.HttpClient;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class JobSeekerService {
 
@@ -39,7 +36,7 @@ public class JobSeekerService {
         logger.debug("inside method submitApplication");
 
         JobSeeker jobSeeker = new JobSeeker();
-        //JobSeeker jobSeekerSaved = new JobSeeker();
+        JobSeeker jobSeekerSaved = new JobSeeker();
 
         try{
 
@@ -50,24 +47,28 @@ public class JobSeekerService {
         jobSeeker.setPhone(jobSeekerRequest.getPhone());
         jobSeeker.setResume(jobSeekerRequest.getResume().getBytes());
 
-            JobSeeker jobSeekerSaved = jobSeekerRepository.findByEmail(jobSeekerRequest.getEmail());
-        logger.debug("JobSeekerRepository- findByEmail() called. jobseekerId="+ jobSeekerSaved);
+        List<JobSeeker> jobSeekerFound = jobSeekerRepository.findByEmail(jobSeekerRequest.getEmail());
+        logger.debug("JobSeekerRepository- findByEmail() called. jobseekerId="+ jobSeekerFound);
 
-        if(jobSeekerSaved == null) {
+        if(jobSeekerFound.isEmpty()) {
              jobSeekerSaved = jobSeekerRepository.save(jobSeeker);
-            //jobSeeker.setJobSeekerId(jobSeekerSaved.getJobSeekerId());
-        }//else{
-           // jobSeeker.setJobSeekerId(jobSeekerId);
-        //}
-        logger.debug("JobSeekerRepository- save() called:"+ jobSeeker);
+        }else{
+            Iterator jobSeekerIterator = jobSeekerFound.listIterator();
+            jobSeekerSaved = (JobSeeker) jobSeekerIterator.next();
+        }
+        jobSeeker.setJobSeekerId(jobSeekerSaved.getJobSeekerId());
+        logger.debug("JobSeekerRepository- save() called:"+ jobSeekerSaved);
 
-            ResponseEntity jobApplication = saveJobApplication(jobSeekerSaved);
-            logger.debug("saveJobApplication() called - "+ jobApplication);
-            return new ResponseEntity<>(jobApplication,HttpStatus.OK);
+
+
+        ResponseEntity jobApplicationResponse = saveJobApplication(jobSeeker);
+        logger.debug("saveJobApplication() called - "+ jobApplicationResponse);
+
+        return new ResponseEntity<>(jobApplicationResponse,HttpStatus.OK);
 
         }
         catch(Exception e){
-            return new ResponseEntity(jobSeeker, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity(new String("Error:"+e.toString()), HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
     }
@@ -95,16 +96,91 @@ public class JobSeekerService {
                     = new RestTemplate().postForEntity(
                     "http://localhost:8080/careers/application/store", entity,
                     JobApplication.class);
-            logger.debug("postForEntity() called:"+ jobApplication);
-            return response;
+            logger.debug("postForEntity() called:"+ response);
+            return new ResponseEntity<>(convertToResponseDto(response.getBody()),headers,HttpStatus.OK);
         }
 
         catch (Exception ex) {
             ex.printStackTrace();
-            return new ResponseEntity(jobApplication, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity(new String("Error"+ex.toString()), HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
     }
 
+    public ResponseEntity updateApplication(JobSeekerRequestDto jobSeekerRequest){
 
+       try{
+               JobSeeker jobSeeker = new JobSeeker();
+               JobSeeker jobSeekerSaved;
+
+
+
+           if(jobSeekerRequest.getEmail() == null){
+               return new ResponseEntity(new String("Email cannot be null"), HttpStatus.NOT_ACCEPTABLE);
+           }
+
+               List<JobSeeker> jobSeekerFound = jobSeekerRepository.findByEmail(jobSeekerRequest.getEmail());
+               logger.debug("JobSeekerRepository- findByEmail() called. jobseekerId="+ jobSeekerFound);
+
+               if(jobSeekerFound == null) {
+                   return new ResponseEntity(new String("Cannot find record with the given ID"), HttpStatus.NO_CONTENT);
+               }else{
+                   Iterator jobSeekerIterator = jobSeekerFound.listIterator();
+                   JobSeeker jobSeekerResult = (JobSeeker) jobSeekerIterator.next();
+                   jobSeeker.setJobSeekerId(jobSeekerResult.getJobSeekerId());
+                   jobSeeker.setEmail(jobSeekerRequest.getEmail());
+
+                   if (jobSeekerRequest.getFullName() != null) {
+                       jobSeeker.setFullName(jobSeekerRequest.getFullName());
+                   } else {
+                       jobSeeker.setFullName(jobSeekerResult.getFullName());
+                   }
+
+                   if(jobSeekerRequest.getJobId() != 0){
+                       jobSeeker.setJobId(jobSeekerRequest.getJobId());
+                   }else{
+                       jobSeeker.setJobId(jobSeekerResult.getJobId());
+                   }
+
+                   if(jobSeekerRequest.getLocation() != null){
+                       jobSeeker.setLocation(jobSeekerRequest.getLocation());
+                   }else{
+                       jobSeeker.setLocation(jobSeekerResult.getLocation());
+                   }
+
+                   if(jobSeekerRequest.getPhone() != null){
+                       jobSeeker.setPhone(jobSeekerRequest.getPhone());
+                   }else{
+                       jobSeeker.setPhone(jobSeekerResult.getPhone());
+                   }
+
+                   if(jobSeekerRequest.getResume() != null){
+                       jobSeeker.setResume(jobSeekerRequest.getResume().getBytes());
+                   }else{
+                       jobSeeker.setResume(jobSeekerResult.getResume());
+                   }
+
+                   jobSeekerSaved = jobSeekerRepository.save(jobSeeker);
+                   logger.debug("update successful!"+jobSeekerSaved);
+                   return new ResponseEntity(new String("Information updated for - " +jobSeekerSaved.getFullName() ), HttpStatus.OK);
+               }
+
+       }
+       catch(Exception e){
+           e.printStackTrace();
+           return new ResponseEntity(new String("Error!"+e.toString()), HttpStatus.INTERNAL_SERVER_ERROR);
+       }
+
+    }
+
+
+    private JobApplicationResponseDto convertToResponseDto(JobApplication jobApplicationResponse) {
+        return new JobApplicationResponseDto(
+                jobApplicationResponse.getJobSeeker().getJobSeekerId(),
+                jobApplicationResponse.getJobApplicationId(),
+                jobApplicationResponse.getJobId(),
+                jobApplicationResponse.getDateApplied(),
+                jobApplicationResponse.getJobSeeker().getFullName()
+        );
+    }
 }

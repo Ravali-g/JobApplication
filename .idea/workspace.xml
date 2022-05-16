@@ -4,41 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5f47d0a-92e1-4048-9e03-996f3541cf3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/JobApplicationContractMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/constants/JobApplicationJsonConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/constants/JobSeekerControllerJsonConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/model/JobApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/model/JobApplicationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/model/JobApplicationRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/model/JobApplicationResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/model/JobSeeker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/model/JobSeekerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/model/JobSeekerRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/JobApplicationMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/config/JobApplicationConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/config/JobSeekerConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/controller/JobApplicationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/controller/JobSeekerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/processor/JobApplicationRequestProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/processor/JobSeekerRequestProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/service/JobApplicationRequestProcessorImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/service/JobApplicationRequestService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/service/JobSeekerRequestProcessorImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/service/JobSeekerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-application-service/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    <list default="true" id="e5f47d0a-92e1-4048-9e03-996f3541cf3c" name="Changes" comment="initial version">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/constants/JobSeekerControllerJsonConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/constants/JobSeekerControllerJsonConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/model/JobApplicationResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/model/JobApplicationResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/model/JobSeekerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-application-contract/src/main/java/com/mycompany/careers/model/JobSeekerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/controller/JobSeekerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/controller/JobSeekerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/processor/JobSeekerRequestProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/processor/JobSeekerRequestProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/service/JobSeekerRequestProcessorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/service/JobSeekerRequestProcessorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/service/JobSeekerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-application-service/src/main/java/com/mycompany/careers/service/JobSeekerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,6 +175,14 @@
       <option name="presentableId" value="Default" />
       <updated>1652146192577</updated>
     </task>
+    <task id="LOCAL-00001" summary="initial version">
+      <created>1652682228162</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652682228163</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -213,6 +195,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial version" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

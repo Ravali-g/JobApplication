@@ -8,4 +8,6 @@ public final class JobSeekerControllerJsonConstants {
     public static final String SEEKER_ID = "delete";
 
     public static final String SEEKERS = "seekers";
+
+    public static final String UPDATE = "update";
 }
