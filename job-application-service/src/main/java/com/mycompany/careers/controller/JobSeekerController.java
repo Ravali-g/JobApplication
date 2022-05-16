@@ -12,35 +12,43 @@ import org.springframework.web.bind.annotation.*;
 import static com.mycompany.careers.constants.JobSeekerControllerJsonConstants.*;
 
 /**
- * Controller that receives the REST requests for all actions on Job Seeker module
+ * Controller that receives the REST requests to create, delete, update and get information about Job Seeker
  */
 
 @RestController
 @RequestMapping(path="/careers/seeker")
 public class JobSeekerController {
-
     private static final Logger logger = LogManager.getLogger(JobSeekerController.class);
-
-    @Autowired
     private final JobSeekerRequestProcessorImpl jobSeekerRequestProcessorImpl;
 
+    @Autowired
     public JobSeekerController(JobSeekerRequestProcessorImpl jobSeekerRequestProcessorImpl){
         this.jobSeekerRequestProcessorImpl = jobSeekerRequestProcessorImpl;
     }
 
     /**
      *
-     * @param
+     * Apply to a job.
+     * This saves the job seeker details in DB and then invokes JobApplicationController to save information regarding the application
      * @param jobSeekerRequest
      * @return
      */
-    @PostMapping (path="{"+APPLY+"}",consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping (consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> applyToJob(@ModelAttribute JobSeekerRequestDto jobSeekerRequest){
         logger.debug("inside method:applyToJob");
         return jobSeekerRequestProcessorImpl.submitApplication(jobSeekerRequest);
     }
 
-
+    /**
+     * Updates the job seeker information in DB
+     * @param jobSeekerRequest
+     * @return
+     */
+    @PutMapping (consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> updateJobApplication(@ModelAttribute JobSeekerRequestDto jobSeekerRequest){
+        logger.debug("inside method:updateJobApplication" + jobSeekerRequest.toString());
+        return jobSeekerRequestProcessorImpl.updateJobApplication(jobSeekerRequest);
+    }
 
 
 }

@@ -43,22 +43,13 @@ public class JobSeeker implements Serializable {
     @Column(name = "IsDeleted", insertable = true, updatable = true, nullable = false)
     private Boolean isDeleted = Boolean.FALSE;
 
+    @Basic
+    @Column(name = "jobAlerts", insertable = true, updatable = true, nullable = true)
+    private Boolean jobAlerts = Boolean.TRUE;
+
     @OneToOne (mappedBy = "jobSeeker")
     private JobApplication jobApplication;
 
-    /*
-    private Set<JobApplication> jobApplications = new HashSet<>();
-
-
-    public Set<JobApplication> getJobApplications() {
-        return jobApplications;
-    }
-
-    public void setJobApplications(Set<JobApplication> jobApplications) {
-        this.jobApplications = jobApplications;
-    }
-
-     */
 
     public JobApplication getJobApplication() {
         return jobApplication;
@@ -136,6 +127,14 @@ public class JobSeeker implements Serializable {
         this.isDeleted = isDeleted;
     }
 
+    public Boolean getJobAlerts() {
+        return jobAlerts;
+    }
+
+    public void setJobAlerts(Boolean jobAlerts) {
+        this.jobAlerts = jobAlerts;
+    }
+
     @Override
     public String toString() {
         return "JobSeeker{" +
@@ -145,9 +144,8 @@ public class JobSeeker implements Serializable {
                 ", phone='" + phone + '\'' +
                 ", location='" + location + '\'' +
                 ", jobId=" + jobId +
-                ", resume=" + Arrays.toString(resume) +
                 ", isDeleted=" + isDeleted +
-                ", jobApplication=" + jobApplication +
+                ", jobAlerts=" + jobAlerts +
                 '}';
     }
 }

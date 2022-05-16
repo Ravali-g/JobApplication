@@ -10,6 +10,7 @@ public class JobSeekerRequestDto {
     private String location;
     private MultipartFile resume;
     private int jobId;
+    private boolean jobAlerts;
 
 
     public String getFullName() {
@@ -60,6 +61,14 @@ public class JobSeekerRequestDto {
         this.jobId = jobId;
     }
 
+    public boolean getJobAlerts() {
+        return jobAlerts;
+    }
+
+    public void setJobAlerts(boolean jobAlerts) {
+        this.jobAlerts = jobAlerts;
+    }
+
     @Override
     public String toString() {
         return "JobSeekerRequestDto{" +
@@ -67,7 +76,10 @@ public class JobSeekerRequestDto {
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
                 ", location='" + location + '\'' +
-                ", resume=" + resume.toString() +
+                ", resume=" + resume +
+                ", jobId=" + jobId +
+                ", jobAlerts='" + jobAlerts + '\'' +
                 '}';
     }
+
 }

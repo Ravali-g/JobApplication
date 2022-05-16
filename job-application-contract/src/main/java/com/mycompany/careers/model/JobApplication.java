@@ -9,7 +9,7 @@ import java.io.Serializable;
 @Entity
 public class JobApplication implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="JobApplicationId", insertable = true, updatable = false, nullable = false)
     private int jobApplicationId;
 
@@ -29,18 +29,6 @@ public class JobApplication implements Serializable {
     @JoinColumn(name="jobSeekerId", referencedColumnName ="jobSeekerId", nullable = false)
     private JobSeeker jobSeeker;
 
-    /*@Basic
-    @Column(name = "JobSeekerId", insertable = true, updatable = true, nullable = false)
-    private int jobSeekerId;
-
-    public int getJobSeekerId() {
-        return jobSeekerId;
-    }
-
-    public void setJobSeekerId(int jobSeekerId) {
-        this.jobSeekerId = jobSeekerId;
-    }
-*/
     public JobSeeker getJobSeeker() {
         return jobSeeker;
     }

@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.6.5'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+}
+
+jar {
+    enabled = true
+}
+
+bootJar{
+
+    enabled = false
+
+}
+
+//application {
+  //  mainClass = 'JobApplicationContractMain'
+//}
+
+group 'com.mycompany'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.6.6'
+    implementation 'mysql:mysql-connector-java:8.0.27'
+    testImplementation 'mysql:mysql-connector-java:8.0.27'
+    testImplementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.6.6'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.6.6'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.6.6'
+    implementation 'org.springframework.data:spring-data-jpa:2.6.3'
+    implementation 'org.springframework.boot:spring-boot-autoconfigure:2.6.6'
+    implementation 'org.springframework.boot:spring-boot:2.6.6'
+    //implementation 'org.springframework.boot:spring-boot-autoconfigure:2.6.6'
+    implementation 'org.springframework.boot:spring-boot-starter:2.6.6'
+    implementation 'org.springframework:spring-web:5.3.19'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+

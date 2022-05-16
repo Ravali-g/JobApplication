@@ -14,11 +14,16 @@ public class JobSeekerRequestProcessorImpl implements JobSeekerRequestProcessor 
         this.jobSeekerService = jobSeekerService;
     }
 
+    @Override
     public ResponseEntity submitApplication( JobSeekerRequestDto jobSeekerRequest){
         return jobSeekerService.submitApplication(jobSeekerRequest);
 
     }
 
+    @Override
+    public ResponseEntity updateJobApplication( JobSeekerRequestDto jobSeekerRequest){
+        return jobSeekerService.updateApplication(jobSeekerRequest);
 
+    }
 
 }

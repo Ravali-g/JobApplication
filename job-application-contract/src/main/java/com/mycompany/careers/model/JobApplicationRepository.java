@@ -24,4 +24,8 @@ public interface JobApplicationRepository extends JpaRepository<JobApplication, 
 
     @Query(value="select js.job_seeker_id, js.full_name, ja.date_applied from job_application ja INNER JOIN job_seeker js ON (ja.job_seeker_id = js.job_seeker_id) AND js.is_deleted = 0 AND ja.is_deleted = 0 WHERE ja.job_id = ?",nativeQuery = true)
     List<Object> getSeekersforJobId(int jobId);
+
+    @Query(value="UPDATE job_application SET is_deleted=1 where job_id = ?",nativeQuery = true)
+    @Modifying
+    void deleteJobSeekersForJobId(int jobId);
 }
